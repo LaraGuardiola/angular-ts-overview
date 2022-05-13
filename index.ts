@@ -64,6 +64,12 @@ class Car {
         this.year = year
     }
 
+    //*IMPORTANT, THIS IS THE BEST SHORTCUT TO INITIALIZE PROPERTIES
+
+    /*constructor(public color: string, private year: number){
+
+    }*/
+
     drive(){
         console.log('*sonido de motor*' + `color ${this.color}, year: ${this.year}`)
     }

@@ -1,5 +1,6 @@
 //* IMPORT SYSTEM
 import { Dark } from './Dark'
+import { GenericClass } from './GenericClass'
 
 //const myName: string = 'Sergio'
 
@@ -123,3 +124,8 @@ class Console {
 }*/
 
 //decorators allow us to add some additional properties (its like another function)
+
+//*CLASS GENERICS
+
+const genericWarrior = new GenericClass<number>(8)
+console.log(genericWarrior.value)

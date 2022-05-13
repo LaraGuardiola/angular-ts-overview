@@ -52,3 +52,28 @@ const otherPost: Post = {
     daysOld: 0,
     published: false
 }
+
+//CLASSES IN TypeScript
+
+class Car {
+    public color: string;
+    private year: number;
+
+    constructor(color: string, year: number){
+        this.color = color
+        this.year = year
+    }
+
+    drive(){
+        console.log('*sonido de motor*' + `color ${this.color}, year: ${this.year}`)
+    }
+}
+
+//forces types and prevents runtime errors
+
+const myCar = new Car('red', 2000)
+myCar.drive()
+
+myCar.color
+//myCar.year - gives an error because its private and can only be accessed from within the class
+//private and public can also be applied to methods of the class

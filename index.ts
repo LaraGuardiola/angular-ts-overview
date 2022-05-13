@@ -1,3 +1,6 @@
+//* IMPORT SYSTEM
+import { Dark } from './Dark'
+
 //const myName: string = 'Sergio'
 
 //: string is the TYPE ANNOTATION, there are many types:
@@ -19,6 +22,11 @@ interface Post {
     title: string;
     daysOld: number;
     published: boolean;
+}
+
+interface Driveable {
+    speed: number;
+    drive(): string;
 }
 
 //functions in TS are:
@@ -74,12 +82,24 @@ class Car {
     }
 }
 
+class Car2 implements Driveable {
+    speed: number;
+    drive(): string {
+        throw new Error('Method not implemented.');
+    }
+}
+
 //forces types and prevents runtime errors
 
 const myCar = new Car('red', 2000)
 myCar.drive()
 
 myCar.color
+
+//using imported class
+const char = new Dark('Gravity spell')
+
+console.log(char.spell, char.type)
 //myCar.year - gives an error because its private and can only be accessed from within the class
 //private and public can also be applied to methods of the class
 
@@ -102,3 +122,4 @@ class Console {
     }
 }*/
 
+//decorators allow us to add some additional properties (its like another function)

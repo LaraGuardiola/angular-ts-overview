@@ -1,0 +1,7 @@
+npm init
+npm install typescript ts-node-dev (installs ts and dev serv)
+on package.json - scripts: "start": "ts-node-dev --no-notify --respawn index.ts"
+
+TOPICS//
+
+TYPE ANNOTATION / TYPE INFERENCE

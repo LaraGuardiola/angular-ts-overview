@@ -56,6 +56,7 @@ const otherPost: Post = {
 //CLASSES IN TypeScript
 
 class Car {
+
     public color: string;
     private year: number;
 
@@ -66,11 +67,9 @@ class Car {
 
     //*IMPORTANT, THIS IS THE BEST SHORTCUT TO INITIALIZE PROPERTIES
 
-    /*constructor(public color: string, private year: number){
+    /*constructor(public color: string, private year: number){}*/
 
-    }*/
-
-    drive(){
+    drive(): void {
         console.log('*sonido de motor*' + `color ${this.color}, year: ${this.year}`)
     }
 }
@@ -83,3 +82,23 @@ myCar.drive()
 myCar.color
 //myCar.year - gives an error because its private and can only be accessed from within the class
 //private and public can also be applied to methods of the class
+
+//*DECORATORS
+
+const Component = (target: any) => {
+    console.log(target)
+
+    return () => {
+
+    }
+}
+
+/*@Component()
+class Console {
+    @Component year: string;
+
+    print(@Component speed: number){
+
+    }
+}*/
+

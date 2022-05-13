@@ -127,5 +127,5 @@ class Console {
 
 //*CLASS GENERICS
 
-const genericWarrior = new GenericClass<number>(8)
+const genericWarrior = new GenericClass<number>(3)
 console.log(genericWarrior.value)
